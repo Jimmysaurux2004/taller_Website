@@ -1,0 +1,24 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+console.log("hola astro") //Se ejecuta antes de renderizar la web
+const nombre = "Jimmy";
+const suma=Math.random()*4;
+---
+
+<BaseLayout>
+<h1>Holaaaa</h1>
+<h2 id="name"></h2>
+<h2>{nombre}</h2>
+</BaseLayout>
+<style>
+	h1{
+		color:aqua
+	}
+</style>
+
+<script>
+	const fill = document.getElementById("name");
+	if (fill) {
+		fill.innerHTML = "Jimmy";
+	}
+</script>
